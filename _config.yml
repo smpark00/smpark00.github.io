@@ -88,9 +88,10 @@ content:
     content:
       - layout: left
         title: Software Engineering Lab
-        sub_title: Kyonngi University
         sub_title: Undergraduate Researcher
         caption: 2024.10 - 2025.02
+        link: https://sites.google.com/view/safetysw
+        link_text: Kyonggi University SELAB
         quote: >
           Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
         description: | # this will include new lines to allow paragraphs
