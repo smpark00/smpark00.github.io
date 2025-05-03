@@ -63,11 +63,11 @@ content:
         description: |
           At Kyonggi University, I made the most of every opportunity to grow as a student and leader:
           
-          - <mark>SW-Centered University Ambassador</mark>: Top beneficiary of Kyonggi’s SW project. I completed 4 overseas software training programs. (3 USA Programs, 1 Singapore Programs)
+          - <mark>SW-Centered University Ambassador</mark>: Top beneficiary of Kyonggi University SW-Centered program. I completed 4 international software training programs. (3 USA, 1 Singapore)
           
-          - <mark>International Presenter</mark>: Represented our SW initiative before the Philippine Presidential Office’s Commission on Higher Education.
+          - <mark>International Presenter</mark>: Represented our SW-Centered program when the Philippine Presidential Office’s Commission on Higher Education.
           
-          - <mark>Advocacy & Leadership</mark>: Successfully pitched the establishment of a Mobility department to the university president.
+          - <mark>Influence</mark>: Successfully pitched the establishment of a Mobility department to the university president.
 
   - title: Work Experience # Title for the section
     layout: list # Type of content section (list/text)
@@ -88,9 +88,8 @@ content:
     content:
       - layout: left
         title: Software Engineering Lab
-        link: https://sites.google.com/view/safetysw/home?authuser=0
-        # link_text: boringcompany.com
-        sub_title: Kyonngi University | Undergraduate Researcher
+        sub_title: Kyonngi University
+        sub_title: Undergraduate Researcher
         caption: 2024.10 - 2025.02
         quote: >
           Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
