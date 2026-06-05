@@ -45,21 +45,30 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "news-began-a-visiting-scholar-appointment-at-purdue-university-dept-of-computer-and-information-technology-through-the-iitp-global-education-program",
-          title: '🌏 Began a Visiting Scholar appointment at Purdue University (Dept. of Computer and...',
+      },{id: "news-won-the-best-paper-award-at-kcse-2025-open-competition-all-researcher-categories-for-rag-based-llms-for-knowledge-transfer-in-software-projects",
+          title: '🏆 Won the Best Paper Award at KCSE 2025 (open competition, all researcher...',
           description: "",
-          section: "News",},{id: "news-started-as-a-data-analyst-intern-at-pathobrainseq-decoding-genomic-data-for-precise-alzheimer-s-diagnosis",
-          title: '🔬 Started as a Data Analyst Intern at PathoBrainSeq, decoding genomic data for...',
+          section: "News",},{id: "news-started-as-a-data-analyst-intern-at-pathobrainseq-analyzing-single-cell-sequencing-data-for-alzheimer-s-research",
+          title: '🔬 Started as a Data Analyst Intern at PathoBrainSeq, analyzing single-cell sequencing data...',
           description: "",
-          section: "News",},{id: "news-received-the-best-paper-award-in-the-general-session-of-kcse-2025-for-my-first-author-paper-as-an-undergraduate",
-          title: '🏆 Received the Best Paper Award in the General Session of KCSE 2025...',
+          section: "News",},{id: "news-received-the-gold-award-at-the-2025-kiit-undergraduate-research-paper-competition-for-the-autoencoder-rag-esg-recommendation-system",
+          title: '🥇 Received the Gold Award at the 2025 KIIT Undergraduate Research Paper Competition...',
+          description: "",
+          section: "News",},{id: "news-joined-gridatech-as-a-research-engineer-building-clinical-and-nursing-domain-llms-shuri-shushu-shulingo",
+          title: '🏢 Joined Gridatech as a Research Engineer, building clinical and nursing-domain LLMs (Shuri,...',
+          description: "",
+          section: "News",},{id: "news-graduated-with-a-b-s-in-computer-engineering-from-kyonggi-university-gpa-3-9-4-5",
+          title: '🎓 Graduated with a B.S. in Computer Engineering from Kyonggi University (GPA 3.9/4.5)....',
+          description: "",
+          section: "News",},{id: "news-first-authored-a-poster-at-adpd-2026-introducing-the-neuromap-platform-single-cell-transcriptomic-signatures-of-peripheral-immunity-in-alzheimer-s-disease",
+          title: '🧬 First-authored a poster at ADPD 2026 introducing the NeuroMap platform — single-cell...',
           description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%70%73%6D%30%38%31%31@%6B%79%6F%6E%67%67%69.%61%63.%6B%72", "_blank");
+          window.open("mailto:%74%6F%6E%79%64%72%61%67%6F%6E%32%37@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
@@ -74,20 +83,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/seungmin-park-7405652a9", "_blank");
-        },
-      },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/sm_park00", "_blank");
-        },
-      },{
-        id: 'social-instagram',
-        title: 'Instagram',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://instagram.com/sm_park0.0", "_blank");
         },
       },{
       id: 'light-theme',
