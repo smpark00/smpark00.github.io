@@ -1,0 +1,71 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Seungmin Park
+    - name: Location
+      value: Suwon, Republic of Korea
+    - name: Email
+      value: psm0811@kyonggi.ac.kr
+    - name: Languages
+      value: Korean (native), English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: B.S. in Computer Engineering
+      institution: Kyonggi University, Suwon, Republic of Korea
+      year: 2019.03 - 2025.08 (Expected)
+      description:
+        - "SW-Centered University Ambassador — top beneficiary of Kyonggi University's SW-Centered program; completed 4 international software training programs (3 in the USA, 1 in Singapore)."
+        - "International Presenter — represented the SW-Centered program before the Philippine Presidential Office's Commission on Higher Education."
+        - "Successfully pitched the establishment of a Mobility department to the university president."
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Data Analyst Intern
+      institution: <a href="https://www.pathobrainseq.com/">PathoBrainSeq</a>, United States
+      year: 2025.02 - Present
+      description:
+        - Analyze genetic datasets and build interactive visualizations to drive Alzheimer's research and diagnostics.
+        - Extract actionable insights from genomic data to support precise diagnosis (work conducted under NDA).
+    - title: Undergraduate Researcher
+      institution: <a href="https://sites.google.com/view/safetysw">Software Engineering Lab (SELAB)</a>, Kyonggi University
+      year: 2024.10 - 2025.02
+      description:
+        - Spearheaded a corporate project in collaboration with SPID.
+        - Authored two first-author papers; one received the Best Paper Award in the General Session of KCSE 2025.
+    - title: Visiting Scholar
+      institution: Purdue University, Dept. of Computer and Information Technology
+      year: 2024.03 - 2024.06
+      description:
+        - Participated in the Global Education Program sponsored by the Korean Government (IITP).
+        - Co-authored a research paper (second author) on evaluating privacy infringement in drone-captured images.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - Best Paper Award, General Session, KCSE 2025 (first author, as an undergraduate)
+    - year: 2024
+      items:
+        - SW-Centered University Ambassador — top program beneficiary, Kyonggi University
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Artificial Intelligence & Machine Learning
+      items:
+        - Applied machine learning on real-world datasets
+        - Genomic and biomedical data analysis
+    - title: Data Science
+      items:
+        - Data visualization and interactive analytics
+        - Extracting actionable insights from complex data
+
+- title: Skills
+  type: list
+  contents:
+    - <u>Focus areas:</u> Data Visualization, Machine Learning, Data Analysis
