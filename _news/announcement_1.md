@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-02-13 10:00:00+0900
+date: 2026-03-15 09:00:00+0900
 inline: true
 related_posts: false
 ---
 
-🏆 Received the **Best Paper Award** in the General Session of **KCSE 2025** for my first-author paper — as an undergraduate.
+🧬 First-authored a poster at **ADPD 2026** introducing the **NeuroMap** platform — single-cell transcriptomic signatures of peripheral immunity in Alzheimer's Disease.

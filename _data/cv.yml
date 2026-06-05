@@ -4,68 +4,138 @@
     - name: Full Name
       value: Seungmin Park
     - name: Location
-      value: Suwon, Republic of Korea
+      value: Anyang, Republic of Korea
     - name: Email
-      value: psm0811@kyonggi.ac.kr
+      value: tonydragon27@gmail.com
     - name: Languages
-      value: Korean (native), English
+      value: Korean (native), English (New TEPS 391)
+
+- title: Research Interests
+  type: text
+  contents:
+    - Large Language Models — retrieval-augmented generation, domain-specific fine-tuning, and agent-based pipelines — and their application to healthcare and biomedical data. Across five first-author papers and industry research spanning clinical LLMs and single-cell transcriptomics, I aim to build language-model systems that turn domain knowledge into reliable, real-world decision support.
 
 - title: Education
   type: time_table
   contents:
     - title: B.S. in Computer Engineering
-      institution: Kyonggi University, Suwon, Republic of Korea
-      year: 2019.03 - 2025.08 (Expected)
+      institution: Kyonggi University, Suwon, South Korea
+      year: 2019 - Feb 2026
       description:
-        - "SW-Centered University Ambassador — top beneficiary of Kyonggi University's SW-Centered program; completed 4 international software training programs (3 in the USA, 1 in Singapore)."
-        - "International Presenter — represented the SW-Centered program before the Philippine Presidential Office's Commission on Higher Education."
-        - "Successfully pitched the establishment of a Mobility department to the university president."
+        - GPA 3.9 / 4.5
+        - Department of Computer Engineering
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
+    - title: Research Engineer
+      institution: Gridatech Inc., Busan, South Korea
+      year: Sep 2025 - Present
+      description:
+        - "Fine-tuned a Gemma 4 31B model into a nursing-domain clinical LLM (<em>Shuri</em>), building the training corpus from scratch by OCR-digitizing nursing textbooks into paired text/image datasets."
+        - "Built <em>ShuShu</em>, a hybrid OCR pipeline for health-checkup forms: benchmarked DeepSeek-OCR, PaddleOCR, and Docling per table layout, routed each form to the best-performing engine, and generated personalized health reports."
+        - "Developed <em>Shulingo</em>, an end-to-end real-time speech-to-speech translation service using a RAG-based agent to recognize and translate nursing terminology and abbreviations that general models miss."
     - title: Data Analyst Intern
-      institution: <a href="https://www.pathobrainseq.com/">PathoBrainSeq</a>, United States
-      year: 2025.02 - Present
+      institution: <a href="https://www.pathobrainseq.com/">PathoBrainSeq</a>, Palo Alto, USA
+      year: Feb 2025 - Sep 2025
       description:
-        - Analyze genetic datasets and build interactive visualizations to drive Alzheimer's research and diagnostics.
-        - Extract actionable insights from genomic data to support precise diagnosis (work conducted under NDA).
-    - title: Undergraduate Researcher
-      institution: <a href="https://sites.google.com/view/safetysw">Software Engineering Lab (SELAB)</a>, Kyonggi University
-      year: 2024.10 - 2025.02
+        - "Processed single-cell RNA/DNA sequencing data from Alzheimer's Disease patients in R — applied Harmony integration to correct cross-donor batch effects and produced UMAP/t-SNE visualizations and statistical summaries."
+        - "Delivered analysis-ready outputs (heatmaps, statistical tables, summary spreadsheets) feeding downstream peripheral immune-signature analysis."
+        - "First-authored a poster at ADPD 2026 introducing the NeuroMap platform."
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Undergraduate Research Intern
+      institution: <a href="https://sites.google.com/view/safetysw">SELAB</a>, Kyonggi University, Suwon, South Korea
+      year: Oct 2024 - Feb 2025
       description:
-        - Spearheaded a corporate project in collaboration with SPID.
-        - Authored two first-author papers; one received the Best Paper Award in the General Session of KCSE 2025.
-    - title: Visiting Scholar
-      institution: Purdue University, Dept. of Computer and Information Technology
-      year: 2024.03 - 2024.06
+        - "Built a RAG-based LLM system for a corporate R&D project, vectorizing GitHub development-process data to mitigate knowledge loss caused by high employee turnover."
+        - "Authored two first-author papers from this work; one received the Best Paper Award at KCSE 2025 (open competition, all researcher categories)."
+    - title: Visiting Scholar, IITP Global Education Program
+      institution: Purdue University, West Lafayette, USA
+      year: Mar 2024 - Jun 2024
       description:
-        - Participated in the Global Education Program sponsored by the Korean Government (IITP).
-        - Co-authored a research paper (second author) on evaluating privacy infringement in drone-captured images.
+        - "Developed a framework to classify privacy-infringement levels in drone-captured images using Privacy Image Quality Assessment (PIQA) algorithms."
+        - "Contributed as a co-first author to the resulting manuscript on privacy assessment for drone imagery."
+
+- title: Selected Projects
+  type: time_table
+  contents:
+    - title: Cost-Efficient Recommendation System for ESG Improvement
+      institution: Team Leader, Researcher
+      year: Jan 2025 - Jun 2025
+      description:
+        - "Embedded collected ESG data with an autoencoder and retrieved candidate activities via a RAG pipeline with dynamic K-selection."
+        - "First-authored the resulting paper (Gold Award, 2025 KIIT Undergraduate Research Paper Competition) and earned a university capstone award."
+    - title: Specialized LLM for Personal Statement Editing
+      institution: Researcher
+      year: Sep 2024 - Nov 2024
+      description:
+        - "Fine-tuned GPT-4o via OpenAI's fine-tuning API to revise Korean job- and admission-application personal statements."
+        - "Augmented the limited human-edited dataset with GPT-4o-generated examples (Self-Instruct-style) to expand training coverage."
+    - title: "2024 NASA Space Apps Challenge — SOS: Symphony of Seismics"
+      institution: Team Leader, Researcher
+      year: Sep 2024 - Oct 2024
+      description:
+        - "Led a 6-member team building a deep-learning pipeline to detect seismic events on Earth and Mars from NASA Mars InSight, IRIS, and APSS TWINS data."
+        - "Used a GAN to augment scarce seismic data (13 to 4,000 samples) and a U-Net to denoise signals, factoring in Mars-specific atmospheric conditions."
 
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2025
       items:
-        - Best Paper Award, General Session, KCSE 2025 (first author, as an undergraduate)
+        - "Best Paper Award, KCSE 2025 — Korea Conference on Software Engineering (open competition, all researcher categories)"
+        - "Gold Award, 2025 KIIT Undergraduate Research Paper Competition"
     - year: 2024
       items:
-        - SW-Centered University Ambassador — top program beneficiary, Kyonggi University
+        - "Gold Award, AWS DeepRacer Campus Competition (Kyonggi University) — reinforcement-learning reward-function design"
+    - year: 2023 - 2025
+      items:
+        - "Merit-based Scholarship, Kyonggi University & Ministry of SMEs (₩10,783,000)"
+        - "Academic Excellence Scholarship, Kyonggi University (Fall 2023)"
 
-- title: Academic Interests
-  type: nested_list
+- title: Teaching Experience
+  type: time_table
   contents:
-    - title: Artificial Intelligence & Machine Learning
-      items:
-        - Applied machine learning on real-world datasets
-        - Genomic and biomedical data analysis
-    - title: Data Science
-      items:
-        - Data visualization and interactive analytics
-        - Extracting actionable insights from complex data
+    - title: C Programming Mentor
+      institution: Kyonggi University, Suwon, South Korea
+      year: Mar 2025 - Jun 2026
+    - title: Teaching Assistant, Basic Capstone Design
+      institution: Kyonggi University, Suwon, South Korea
+      year: Mar 2023 - Jun 2023
+
+- title: International Experience
+  type: time_table
+  contents:
+    - title: CES 2024 & 2025, Silicon Valley Field Study
+      institution: Team Leader, Las Vegas & San Francisco, USA
+      year: Jan 2024 & 2025
+      description:
+        - "Attended CES (2024-2025) to track emerging global technology trends; in 2025, led a student team through field visits and networking events with Google, Stanford University, and UKF."
 
 - title: Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - Python, R
+    - title: ML / LLM
+      items:
+        - PyTorch, LoRA / QLoRA, continued pre-training (CPT)
+        - LLaMA-Factory, Axolotl, Unsloth
+    - title: Data / Stats
+      items:
+        - Harmony (batch correction), UMAP / t-SNE, statistical visualization (heatmaps)
+    - title: Compute
+      items:
+        - "Multi-GPU training on Ubuntu 24.04 — A6000 (48 GB), 2x RTX 5090, A4000 PRO (Blackwell), 4x RTX 3090"
+    - title: Certifications
+      items:
+        - Engineer Information Processing, SQL Developer, CSTS, Linux Master Level 2
+
+- title: Other Interests
   type: list
   contents:
-    - <u>Focus areas:</u> Data Visualization, Machine Learning, Data Analysis
+    - <u>Languages:</u> Korean (Native), English (New TEPS 391)

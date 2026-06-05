@@ -2,15 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: Computer Science @ <a href='https://www.kyonggi.ac.kr/'>Kyonggi University</a> · Data Analyst Intern @ <a href='https://www.pathobrainseq.com/'>PathoBrainSeq</a>
+subtitle: Research Engineer @ Gridatech · LLMs for Healthcare & Biomedicine
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Suwon, Republic of Korea</p>
-    <p>psm0811@kyonggi.ac.kr</p>
+    <p>Anyang, Republic of Korea</p>
+    <p>tonydragon27@gmail.com</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,10 +26,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm **Seungmin Park**, a senior Computer Science student at [Kyonggi University](https://www.kyonggi.ac.kr/), graduating in August 2025. I'm passionate about <mark>Artificial Intelligence</mark>, <mark>Machine Learning</mark>, and <mark>Data Science</mark>, and I love turning complex data into clear, actionable insights.
+Hi! I'm **Seungmin Park**, a Research Engineer at **Gridatech** working on <mark>Large Language Models</mark> for healthcare and biomedicine. My research centers on <mark>retrieval-augmented generation</mark>, <mark>domain-specific fine-tuning</mark>, and <mark>agent-based pipelines</mark> — building language-model systems that turn domain knowledge into reliable, real-world decision support.
 
-I'm currently a **Data Analyst Intern** at [PathoBrainSeq](https://www.pathobrainseq.com/), a U.S.-based startup, where I analyze genomic datasets and build interactive visualizations to support precise Alzheimer's diagnosis. Previously, I was a **Visiting Scholar** at [Purdue University](https://www.purdue.edu/) and an **Undergraduate Researcher** at the [Software Engineering Lab](https://sites.google.com/view/safetysw) at Kyonggi University, where my first-author paper received the **Best Paper Award** in the General Session of KCSE 2025.
+At Gridatech I fine-tune clinical LLMs for the nursing domain (building training corpora from scratch via OCR), develop hybrid OCR pipelines for health-checkup forms, and build real-time speech-to-speech translation for medical terminology. Previously, I analyzed single-cell transcriptomic data of Alzheimer's patients as a Data Analyst Intern at [PathoBrainSeq](https://www.pathobrainseq.com/) (first-authoring the **NeuroMap** poster at ADPD 2026), was a **Visiting Scholar** at [Purdue University](https://www.purdue.edu/), and an Undergraduate Researcher at the [Software Engineering Lab](https://sites.google.com/view/safetysw) at Kyonggi University, where my first-author paper won the **Best Paper Award** at KCSE 2025.
 
-I'm a fast, motivated learner who enjoys taking on new challenges. Right now I'm focusing most on **data visualization** and **machine learning**.
+I earned my B.S. in Computer Engineering from [Kyonggi University](https://www.kyonggi.ac.kr/) (Feb 2026, GPA 3.9/4.5), with **five first-author papers** across clinical LLMs and single-cell transcriptomics.
 
-Feel free to explore my [publications](/publications/) and [CV](/cv/), or [reach out](mailto:psm0811@kyonggi.ac.kr) — I'm always happy to connect.
+Feel free to explore my [publications](/publications/) and [CV](/cv/), or [reach out](mailto:tonydragon27@gmail.com) — I'm always happy to connect.

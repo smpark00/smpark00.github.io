@@ -9,11 +9,11 @@ last_name: Park
 contact_note: >
   Feel free to reach out via email — it's the best way to get in touch.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Seungmin Park — Computer Science student focused on AI, Machine Learning, and Data Science.
+  Personal website of Seungmin Park — Research Engineer working on Large Language Models for healthcare and biomedicine (RAG, domain-specific fine-tuning, agent-based pipelines).
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Seungmin Park, AI, machine learning, data science, computer science, Kyonggi University # add your own keywords or leave empty
+keywords: Seungmin Park, large language models, LLM, RAG, fine-tuning, healthcare AI, biomedical, machine learning, research engineer # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
