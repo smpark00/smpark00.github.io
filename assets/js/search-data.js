@@ -45,7 +45,16 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "news-won-the-best-paper-award-at-kcse-2025-open-competition-all-researcher-categories-for-rag-based-llms-for-knowledge-transfer-in-software-projects",
+      },{id: "news-️-attended-ces-2024-in-las-vegas-to-explore-emerging-global-technology-trends",
+          title: '✈️ Attended CES 2024 in Las Vegas to explore emerging global technology trends....',
+          description: "",
+          section: "News",},{id: "news-began-a-visiting-scholar-appointment-at-purdue-university-iitp-global-education-program-researching-privacy-assessment-for-drone-captured-imagery-piqa",
+          title: '🌎 Began a Visiting Scholar appointment at Purdue University (IITP Global Education Program),...',
+          description: "",
+          section: "News",},{id: "news-led-a-student-team-at-ces-2025-and-a-silicon-valley-field-study-visits-and-networking-with-google-stanford-university-and-ukf",
+          title: '🚀 Led a student team at CES 2025 and a Silicon Valley field...',
+          description: "",
+          section: "News",},{id: "news-won-the-best-paper-award-at-kcse-2025-open-competition-all-researcher-categories-for-rag-based-llms-for-knowledge-transfer-in-software-projects",
           title: '🏆 Won the Best Paper Award at KCSE 2025 (open competition, all researcher...',
           description: "",
           section: "News",},{id: "news-started-as-a-data-analyst-intern-at-pathobrainseq-analyzing-single-cell-sequencing-data-for-alzheimer-s-research",
@@ -59,9 +68,6 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-graduated-with-a-b-s-in-computer-engineering-from-kyonggi-university-gpa-3-9-4-5",
           title: '🎓 Graduated with a B.S. in Computer Engineering from Kyonggi University (GPA 3.9/4.5)....',
-          description: "",
-          section: "News",},{id: "news-first-authored-a-poster-at-adpd-2026-introducing-the-neuromap-platform-single-cell-transcriptomic-signatures-of-peripheral-immunity-in-alzheimer-s-disease",
-          title: '🧬 First-authored a poster at ADPD 2026 introducing the NeuroMap platform — single-cell...',
           description: "",
           section: "News",},{
         id: 'social-email',
