@@ -13,6 +13,16 @@ table.table-cv {
   th {
     padding: 1px;
   }
+
+  // Allow the date/period badge to wrap inside its narrow column so long
+  // ranges (e.g. "Sep 2025 - Present") don't overflow and overlap the title.
+  span.badge {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    display: inline-block;
+    line-height: 1.25;
+  }
 }
 
 a.btncv {
