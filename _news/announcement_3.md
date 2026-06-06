@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🏢 Joined **Gridatech** as a **Research Engineer**, building clinical and nursing-domain LLMs (Shuri, ShuShu, Shulingo).
+🏢 Joined **[Gridatech Inc.](https://www.grida.tech/)** as a **Research Engineer**, building clinical and nursing-domain LLMs (Shuri, ShuShu, Shulingo).
