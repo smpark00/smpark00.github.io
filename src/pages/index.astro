@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import NewsList from "../components/NewsList.astro";
+import PublicationItem from "../components/PublicationItem.astro";
+import { profile } from "../data/profile";
+import { timeline } from "../data/timeline";
+import { selectedPublications } from "../data/publications";
+---
+
+<Base>
+  <Hero />
+
+  <!-- About -->
+  <section class="section about">
+    {profile.bioHtml.map((p) => <p set:html={p} />)}
+  </section>
+
+  <!-- Experience / Research / Education timelines -->
+  {
+    timeline.map((sec) => (
+      <section class="section">
+        <SectionHeader emoji={sec.emoji} title={sec.title} />
+        {sec.entries.map((entry) => (
+          <TimelineItem entry={entry} />
+        ))}
+      </section>
+    ))
+  }
+
+  <!-- News -->
+  <section class="section">
+    <SectionHeader emoji="📰" title="News" />
+    <NewsList scrollable={true} />
+  </section>
+
+  <!-- Selected publications -->
+  <section class="section">
+    <SectionHeader
+      emoji="📄"
+      title="Selected Publications"
+      href="/publications"
+    />
+    {selectedPublications.map((pub) => <PublicationItem pub={pub} />)}
+  </section>
+</Base>
+
+<style>
+  .about p:last-child {
+    margin-bottom: 0;
+  }
+</style>

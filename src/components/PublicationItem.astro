@@ -1,0 +1,126 @@
+---
+import type { Publication } from "../data/publications";
+import { SELF_AUTHOR } from "../data/publications";
+
+interface Props {
+  pub: Publication;
+}
+const { pub } = Astro.props;
+
+// Bold + underline the site owner's name within the author list.
+const authorsHtml = pub.authors
+  .split(", ")
+  .map((a) => (a === SELF_AUTHOR ? `<strong class="self-author">${a}</strong>` : a))
+  .join(", ");
+---
+
+<article class="pub">
+  <div class="pub-badge"><span>{pub.abbr}</span></div>
+  <div class="pub-body">
+    <h3 class="pub-title">{pub.title}</h3>
+    <p class="pub-authors" set:html={authorsHtml} />
+    <p class="pub-venue muted">{pub.venue}, {pub.year}</p>
+    {pub.award && <p class="pub-award">{pub.award}</p>}
+    {pub.note && <p class="pub-note muted">{pub.note}</p>}
+    {
+      pub.links && pub.links.length > 0 && (
+        <p class="pub-links">
+          {pub.links.map((l) => (
+            <a href={l.url} target="_blank" rel="noopener noreferrer">
+              {l.label}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .pub {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .pub:last-child {
+    border-bottom: none;
+  }
+  .pub-badge {
+    flex: 0 0 auto;
+    width: 64px;
+    padding-top: 0.15rem;
+  }
+  .pub-badge span {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+    text-align: center;
+    width: 100%;
+  }
+  .pub-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .pub-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .pub-authors {
+    margin: 0.3rem 0 0.15rem;
+    font-size: 0.92rem;
+  }
+  .pub-authors :global(.self-author) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .pub-venue {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .pub-award {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .pub-note {
+    margin: 0.3rem 0 0;
+    font-size: 0.88rem;
+    font-style: italic;
+  }
+  .pub-links {
+    margin: 0.5rem 0 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .pub-links a {
+    font-size: 0.82rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.15rem 0.55rem;
+    color: var(--text-muted);
+  }
+  .pub-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    .pub {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .pub-badge {
+      width: auto;
+    }
+    .pub-badge span {
+      width: auto;
+    }
+  }
+</style>

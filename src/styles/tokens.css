@@ -1,0 +1,56 @@
+/* Design tokens — neutral monochrome + single accent.
+   Swap a value here to retheme the whole site. */
+:root {
+  /* Surfaces & text (monochrome) */
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: rgba(0, 0, 0, 0.08);
+
+  /* Single point color */
+  --accent: #3b5bdb;
+  --accent-soft: rgba(59, 91, 219, 0.1);
+  --mark-bg: rgba(59, 91, 219, 0.12);
+
+  /* Layout */
+  --max-width: 760px;
+  --page-pad: 1.5rem;
+  --radius: 10px;
+
+  /* Typography */
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --fs-base: 16px;
+  --lh-base: 1.65;
+
+  /* Spacing scale */
+  --space-section: 3rem;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #e6e6e6;
+  --text-muted: #9aa0aa;
+  --border: rgba(255, 255, 255, 0.1);
+
+  --accent: #7c93f2;
+  --accent-soft: rgba(124, 147, 242, 0.14);
+  --mark-bg: rgba(124, 147, 242, 0.18);
+}
+
+/* Respect OS preference before any explicit toggle is stored */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --text: #e6e6e6;
+    --text-muted: #9aa0aa;
+    --border: rgba(255, 255, 255, 0.1);
+    --accent: #7c93f2;
+    --accent-soft: rgba(124, 147, 242, 0.14);
+    --mark-bg: rgba(124, 147, 242, 0.18);
+  }
+}

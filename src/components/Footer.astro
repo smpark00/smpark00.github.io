@@ -1,0 +1,28 @@
+---
+import { profile } from "../data/profile";
+const year = 2026;
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© {year} {profile.name}</span>
+    <span class="muted">Built with <a href="https://astro.build">Astro</a> · Hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    padding-block: 1.5rem;
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>

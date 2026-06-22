@@ -1,0 +1,44 @@
+---
+interface Props {
+  emoji: string;
+  title: string;
+  href?: string; // optional "view all" link
+  linkLabel?: string;
+}
+const { emoji, title, href, linkLabel = "View all →" } = Astro.props;
+---
+
+<div class="section-header">
+  <h2><span class="emoji" aria-hidden="true">{emoji}</span>{title}</h2>
+  {href && <a class="view-all" href={href}>{linkLabel}</a>}
+</div>
+
+<style>
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .view-all {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .view-all:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>

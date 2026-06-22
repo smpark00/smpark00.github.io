@@ -1,0 +1,79 @@
+---
+import { profile } from "../data/profile";
+import Socials from "./Socials.astro";
+---
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>{profile.name}</h1>
+    <p class="subtitle" set:html={profile.subtitleHtml} />
+    <p class="meta muted">
+      <span>📍 {profile.location}</span>
+      <span>·</span>
+      <a href={`mailto:${profile.email}`}>{profile.email}</a>
+    </p>
+    <div class="hero-socials">
+      <Socials />
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img
+      src={profile.image}
+      alt={`Portrait of ${profile.name}`}
+      width="220"
+      height="220"
+      loading="eager"
+    />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  .hero-text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 0.5rem 0 0.75rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+  }
+  .hero-socials {
+    margin-top: 0.5rem;
+  }
+  .hero-photo {
+    flex: 0 0 auto;
+  }
+  .hero-photo img {
+    width: 220px;
+    height: 220px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 560px) {
+    .hero {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-top: 1.75rem;
+    }
+    .hero-photo img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+</style>

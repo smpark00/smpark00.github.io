@@ -1,0 +1,88 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { profile } from "../data/profile";
+
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+const links = [
+  { href: "/", label: "About" },
+  { href: "/publications", label: "Publications" },
+  { href: "/cv", label: "CV" },
+];
+---
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="brand">{profile.name}</a>
+    <nav class="nav-links" aria-label="Primary">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class:list={["nav-link", { active: isActive(l.href) }]}
+            aria-current={isActive(l.href) ? "page" : undefined}
+          >
+            {l.label}
+          </a>
+        ))
+      }
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+  .brand:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .nav-link {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .nav-link:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-link.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .nav-links {
+      gap: 0.75rem;
+    }
+    .nav-link {
+      font-size: 0.9rem;
+    }
+    .brand {
+      font-size: 0.98rem;
+    }
+  }
+</style>

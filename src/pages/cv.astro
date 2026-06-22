@@ -1,0 +1,216 @@
+---
+import Base from "../layouts/Base.astro";
+import cvRaw from "../data/cv.yml?raw";
+import yaml from "js-yaml";
+
+interface CvSection {
+  title: string;
+  type: "map" | "text" | "time_table" | "nested_list" | "list";
+  contents: any[];
+}
+
+const cv = yaml.load(cvRaw) as CvSection[];
+
+// Anchor id from section title
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+---
+
+<Base title="CV · Seungmin Park">
+  <header class="page-head">
+    <h1>Curriculum Vitae</h1>
+    <p class="muted">Seungmin Park · Research Engineer</p>
+  </header>
+
+  <nav class="cv-toc" aria-label="CV sections">
+    {cv.map((s) => <a href={`#${slug(s.title)}`}>{s.title}</a>)}
+  </nav>
+
+  {
+    cv.map((section) => (
+      <section class="cv-section" id={slug(section.title)}>
+        <h2>{section.title}</h2>
+
+        {section.type === "map" && (
+          <dl class="cv-map">
+            {section.contents.map((row: any) => (
+              <div class="cv-map-row">
+                <dt>{row.name}</dt>
+                <dd set:html={String(row.value)} />
+              </div>
+            ))}
+          </dl>
+        )}
+
+        {section.type === "text" && (
+          <div class="cv-text">
+            {section.contents.map((p: any) => (
+              <p set:html={String(p)} />
+            ))}
+          </div>
+        )}
+
+        {section.type === "time_table" && (
+          <div class="cv-tt">
+            {section.contents.map((item: any) => (
+              <article class="cv-entry">
+                <div class="cv-entry-head">
+                  {item.title ? (
+                    <h3 set:html={String(item.title)} />
+                  ) : (
+                    <h3>{item.year}</h3>
+                  )}
+                  {item.title && item.year && (
+                    <span class="cv-year muted">{item.year}</span>
+                  )}
+                </div>
+                {item.institution && (
+                  <p class="cv-inst" set:html={String(item.institution)} />
+                )}
+                {item.description && (
+                  <ul class="cv-bullets">
+                    {item.description.map((d: any) => (
+                      <li set:html={String(d)} />
+                    ))}
+                  </ul>
+                )}
+                {item.items && (
+                  <ul class="cv-bullets">
+                    {item.items.map((d: any) => (
+                      <li set:html={String(d)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+            ))}
+          </div>
+        )}
+
+        {section.type === "nested_list" && (
+          <div class="cv-nested">
+            {section.contents.map((group: any) => (
+              <div class="cv-nested-group">
+                <h3>{group.title}</h3>
+                <ul class="cv-bullets">
+                  {group.items.map((d: any) => (
+                    <li set:html={String(d)} />
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {section.type === "list" && (
+          <ul class="cv-bullets">
+            {section.contents.map((d: any) => (
+              <li set:html={String(d)} />
+            ))}
+          </ul>
+        )}
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .page-head {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .page-head p {
+    margin-top: 0.3rem;
+  }
+  .cv-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    padding: 0.9rem 0;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .cv-toc a {
+    color: var(--text-muted);
+  }
+  .cv-toc a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .cv-section {
+    margin-top: 2.5rem;
+    scroll-margin-top: 72px;
+  }
+  .cv-section > h2 {
+    font-size: 1.25rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-soft);
+    margin-bottom: 1rem;
+  }
+  .cv-map {
+    margin: 0;
+  }
+  .cv-map-row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0.5rem 1rem;
+    padding: 0.3rem 0;
+  }
+  .cv-map-row dt {
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .cv-map-row dd {
+    margin: 0;
+  }
+  .cv-text p:last-child {
+    margin-bottom: 0;
+  }
+  .cv-entry {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cv-entry:last-child {
+    border-bottom: none;
+  }
+  .cv-entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .cv-entry-head h3 {
+    font-size: 1rem;
+  }
+  .cv-year {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .cv-inst {
+    margin: 0.15rem 0 0.4rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+  .cv-bullets {
+    margin: 0.3rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.93rem;
+  }
+  .cv-bullets li {
+    margin-bottom: 0.3rem;
+  }
+  .cv-nested-group {
+    margin-bottom: 1rem;
+  }
+  .cv-nested-group h3 {
+    font-size: 0.98rem;
+    margin-bottom: 0.2rem;
+  }
+  @media (max-width: 480px) {
+    .cv-map-row {
+      grid-template-columns: 1fr;
+      gap: 0.1rem;
+    }
+  }
+</style>

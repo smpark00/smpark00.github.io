@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import PublicationItem from "../components/PublicationItem.astro";
+import { publications } from "../data/publications";
+
+// Group by year, descending.
+const byYear = new Map<number, typeof publications>();
+for (const pub of [...publications].sort((a, b) => b.year - a.year)) {
+  const list = byYear.get(pub.year) ?? [];
+  list.push(pub);
+  byYear.set(pub.year, list);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<Base title="Publications · Seungmin Park">
+  <header class="page-head">
+    <h1>Publications</h1>
+    <p class="muted">
+      First-author papers across clinical LLMs and single-cell transcriptomics.
+    </p>
+  </header>
+
+  {
+    years.map((year) => (
+      <section class="year-group">
+        <h2 class="year">{year}</h2>
+        {byYear.get(year)!.map((pub) => (
+          <PublicationItem pub={pub} />
+        ))}
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .page-head {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .page-head p {
+    margin-top: 0.4rem;
+  }
+  .year-group {
+    margin-top: 2rem;
+  }
+  .year {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.5rem;
+  }
+</style>

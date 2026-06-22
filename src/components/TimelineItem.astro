@@ -1,0 +1,121 @@
+---
+import type { TimelineEntry } from "../data/timeline";
+interface Props {
+  entry: TimelineEntry;
+}
+const { entry } = Astro.props;
+---
+
+<article class="t-item">
+  <div class="t-logo" aria-hidden="true">
+    {
+      entry.logo ? (
+        <img src={entry.logo} alt="" width="44" height="44" />
+      ) : (
+        <span class="t-initials">{entry.initials}</span>
+      )
+    }
+  </div>
+  <div class="t-body">
+    <div class="t-head">
+      <h3 class="t-title">{entry.title}</h3>
+      <span class="t-year muted">{entry.year}</span>
+    </div>
+    <p class="t-inst">
+      {
+        entry.institutionUrl ? (
+          <a href={entry.institutionUrl} target="_blank" rel="noopener noreferrer">
+            {entry.institution}
+          </a>
+        ) : (
+          entry.institution
+        )
+      }
+      {entry.location && <span class="muted"> · {entry.location}</span>}
+    </p>
+    {
+      entry.bullets && entry.bullets.length > 0 && (
+        <ul class="t-bullets">
+          {entry.bullets.map((b) => (
+            <li set:html={b} />
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .t-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .t-item:last-child {
+    border-bottom: none;
+  }
+  .t-logo {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    /* Always-light chip so dark/transparent logos stay legible in dark mode */
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  /* Initials fallback keeps the themed surface look */
+  .t-logo:not(:has(img)) {
+    background: var(--surface);
+  }
+  .t-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+  }
+  .t-initials {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+  .t-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .t-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .t-title {
+    font-size: 1rem;
+  }
+  .t-year {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .t-inst {
+    margin: 0.15rem 0 0.4rem;
+    font-size: 0.92rem;
+  }
+  .t-bullets {
+    margin: 0.4rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+  .t-bullets li {
+    margin-bottom: 0.3rem;
+  }
+  .t-bullets :global(em) {
+    color: var(--text);
+    font-style: italic;
+  }
+</style>
