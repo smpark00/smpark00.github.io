@@ -30,7 +30,7 @@
   contents:
     - title: Research Engineer
       institution: <a href="https://www.grida.tech/">Gridatech Inc.</a>, Busan, South Korea
-      year: Sep 2025 - Present
+      year: Sep 2025 - Jun 2026
       description:
         - "Fine-tuned a Gemma 4 31B model into a nursing-domain clinical LLM (<em>Shuri</em>), building the training corpus from scratch by OCR-digitizing nursing textbooks into paired text/image datasets."
         - "Built <em>ShuShu</em>, a hybrid OCR pipeline for health-checkup forms: benchmarked DeepSeek-OCR, PaddleOCR, and Docling per table layout, routed each form to the best-performing engine, and generated personalized health reports."
