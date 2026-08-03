@@ -25,7 +25,7 @@ export const timeline: TimelineSection[] = [
         institution: "Gridatech Inc.",
         institutionUrl: "https://www.grida.tech/",
         location: "Busan, South Korea",
-        year: "Sep 2025 — Present",
+        year: "Sep 2025 — Jun 2026",
         initials: "G",
         logo: "/logos/gridatech.png",
         bullets: [
