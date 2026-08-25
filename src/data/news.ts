@@ -9,7 +9,7 @@ export const news: NewsItem[] = [
   {
     date: "2026-08-01",
     display: "Aug 2026",
-    html: "🌱 Volunteered in Kyrgyzstan through the <strong>Gyeonggi Climate Volunteer Program</strong> (Aug 2026).",
+    html: "🌱 Volunteered in Kyrgyzstan through the <strong>Gyeonggi Climate Volunteer Program</strong>.",
   },
   {
     date: "2026-02-20",
