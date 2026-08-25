@@ -3,7 +3,7 @@ export const profile = {
   firstName: "Seungmin",
   lastName: "Park",
   subtitleHtml:
-    'Research Engineer @ <a href="https://www.grida.tech/">Gridatech Inc.</a> · LLMs for Healthcare &amp; Biomedicine',
+    'Research Engineer · LLMs for Healthcare &amp; Biomedicine',
   location: "Anyang, Republic of Korea",
   email: "tonydragon27@gmail.com",
   image: "/img/prof_pic.jpg",
