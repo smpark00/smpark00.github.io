@@ -12,12 +12,12 @@ import Socials from "./Socials.astro";
       <span>·</span>
       <a href={`mailto:${profile.email}`}>{profile.email}</a>
     </p>
-    <div class="hero-socials">
+    <div class="hero-actions">
       <Socials />
+      <a class="cv-download" href="/Seungmin_Park_CV.pdf" download>
+        Download CV (PDF)
+      </a>
     </div>
-    <a class="cv-download" href="/Seungmin_Park_CV.pdf" download>
-      Download CV (PDF)
-    </a>
   </div>
   <div class="hero-photo">
     <img
@@ -54,13 +54,18 @@ import Socials from "./Socials.astro";
     font-size: 0.92rem;
     margin-bottom: 1rem;
   }
-  .hero-socials {
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
     margin-top: 0.5rem;
   }
   .cv-download {
     display: inline-flex;
     align-items: center;
-    margin-top: 0.9rem;
+    justify-content: center;
+    min-height: 38px;
     padding: 0.45rem 0.75rem;
     border: 1px solid var(--border);
     border-radius: 7px;
@@ -94,6 +99,11 @@ import Socials from "./Socials.astro";
     .hero-photo img {
       width: 160px;
       height: 160px;
+    }
+  }
+  @media (max-width: 360px) {
+    .cv-download {
+      flex: 1 1 100%;
     }
   }
 </style>
