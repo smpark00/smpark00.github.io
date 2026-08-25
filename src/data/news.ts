@@ -7,6 +7,11 @@ export interface NewsItem {
 // Reverse-chronological. Sorted at render time too, but kept ordered here.
 export const news: NewsItem[] = [
   {
+    date: "2026-08-01",
+    display: "Aug 2026",
+    html: "🌱 Participated in the <strong>Gyeonggi Climate Volunteer Program</strong> in Kyrgyzstan, contributing to educational volunteering, tree-planting activities, and cultural exchange.",
+  },
+  {
     date: "2026-02-20",
     display: "Feb 2026",
     html: "🎓 Graduated with a <strong>B.S. in Computer Engineering</strong> from Kyonggi University (GPA 3.9/4.5).",
